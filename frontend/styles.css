@@ -1,0 +1,126 @@
+/* frontend/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+.controls {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.controls label {
+    font-size: 18px;
+}
+
+.controls select,
+.controls button,
+.controls span {
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+#grid {
+    display: inline-block;
+    margin: 20px auto;
+    border: 2px solid #333;
+    position: relative;
+    background-color: #fff;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #999;
+    font-size: 24px;
+    line-height: 50px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+.cell.empty:hover {
+    background-color: #e0e0e0;
+}
+
+.cell.fixed {
+    background-color: #ccc;
+    cursor: default;
+}
+
+.cell.solution {
+    background-color: #d4edda;
+}
+
+.invalid {
+    background-color: #ffcccc !important;
+}
+
+.h-hint,
+.v-hint {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    position: relative;
+    color: #007bff;
+}
+
+.h-hint {
+    margin: 0 5px;
+}
+
+.v-hint-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spacer {
+    width: 50px;
+}
+
+#timer,
+#score {
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+@media (max-width: 600px) {
+    .cell {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        line-height: 40px;
+    }
+
+    .h-hint,
+    .v-hint {
+        width: 16px;
+        height: 16px;
+        font-size: 14px;
+    }
+
+    .controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
